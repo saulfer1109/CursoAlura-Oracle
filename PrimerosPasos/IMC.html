@@ -1,0 +1,96 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA Calculo IMC</h1>
+
+<script>
+
+	function saltarLinea(){
+
+		document.write("<br><br>");
+
+	}
+
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+
+	}
+	function calcularimc(peso1,altura1,nombre1,peso2,altura2,nombre2){
+		imc=peso1/(altura1*altura1);
+		imc2=peso2/(altura2*altura2);
+		promedio=(imc+imc2)/2;
+		document.write("El promedio de imc de "+nombre1+ " y "+nombre2+"es de: "+promedio);
+		document.write("<br><br>");
+
+	}
+	function promedioimc(imc1,imc2) {
+		promedio=(imc1+imc2)/2;
+		imprimir("El Promedio es: "+promedio);
+	}
+	
+	
+	calcularimc(80,1.8,"Pedro",90,1.95,"Felipe");
+	
+	
+</script>
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+<script>
+
+	function saltarLinea(){
+
+		document.write("<br><br>");
+
+	}
+
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+
+	}
+	function calcularimc(peso,altura){
+		imc=peso/(altura*altura);
+		
+		return imc;
+
+	}
+	
+	var imcpepe=calcularimc(90,1.71);
+	var imcrona=calcularimc(85,1.80);
+	
+	imprimir("El promedio del imc entre Pepe y Rona es de: "+(imcpepe+imcrona)/2);
+	
+	
+</script>
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+<script>
+
+	function saltarLinea(){
+
+		document.write("<br><br>");
+
+	}
+
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+
+	}
+	function calcularimc(peso,altura){
+		imc=peso/(altura*altura);
+		
+		return imc;
+
+	}
+	var nombre=prompt("Ingrese su nombre");
+	var peso=prompt(nombre+ " Ingrese su peso");
+	var altura=prompt(nombre+ " Ingrese su altura");
+	var tuimc=calcularimc(peso,altura);
+
+	imprimir(nombre+ " tu imc es de: "+tuimc);
+	
+</script>
